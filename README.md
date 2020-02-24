@@ -25,5 +25,17 @@ I want my account to initialize with a balance of zero
 As an account holder
 So that I can store my money
 I want to be able to deposit into my account and have the balance update to reflect this
+
+As an account holder
+So I can deposit my money
+I want to be alerted when I try to deposit a negative amount
+
+As an account holder
+So that I can access my money
+I want to be able to withdraw from my account and have the balance update to reflect this
+
+As an account holder
+So that I don't overdraw my account
+I want to be warned when I attempt to withdraw more than my balance
 ```
 
