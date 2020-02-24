@@ -6,6 +6,7 @@ class BankAccount
   end
 
   def deposit(amount)
+    raise 'Invalid amount' if amount.negative?
     @balance += amount
   end
 end

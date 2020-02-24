@@ -14,5 +14,9 @@ describe BankAccount do
       account.deposit(10)
       expect(account.balance).to eq 10
     end
+
+    it 'raises an error if deposit amount < 0' do
+      expect { account.deposit(-10) }.to raise_error 'Invalid amount'
+    end
   end
 end
