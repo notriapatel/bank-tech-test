@@ -19,4 +19,11 @@ describe BankAccount do
       expect { account.deposit(-10) }.to raise_error 'Invalid amount'
     end
   end
+
+  describe '#withdraw' do
+    it 'updates balance after a withdrawal has been made' do
+      account.deposit(10)
+      expect(account.withdraw(10)).to eq 0
+    end
+  end
 end

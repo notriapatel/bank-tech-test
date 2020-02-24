@@ -9,4 +9,8 @@ class BankAccount
     raise 'Invalid amount' if amount.negative?
     @balance += amount
   end
+
+  def withdraw(amount)
+    @balance -= amount
+  end
 end
