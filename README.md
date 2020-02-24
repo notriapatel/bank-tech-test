@@ -17,6 +17,8 @@
 **When** she prints her bank statement
 **Then** she would see
 
+## User stories
+
 ```
 As an account holder
 So that I can know how much money I have
