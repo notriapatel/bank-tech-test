@@ -1,7 +1,7 @@
 class BankAccount
   attr_reader :balance
 
-  def initialize(printer = StatementPrinter.new)
+  def initialize(_printer = StatementPrinter.new)
     @balance = 0
     @transactions = []
     @date = DateTime.now.strftime('%d/%m/%Y')
@@ -24,5 +24,4 @@ class BankAccount
   def sort_transactions
     @transactions.reverse
   end
-
 end

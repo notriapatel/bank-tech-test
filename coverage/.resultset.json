@@ -101,6 +101,21 @@
           null,
           null
         ]
+      },
+      "/Users/riapatel/makers/week-10/bank-tech-test/spec/transaction_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/riapatel/makers/week-10/bank-tech-test/lib/transaction.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
     "timestamp": 1582502400
