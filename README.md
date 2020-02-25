@@ -11,10 +11,10 @@
 
 ### Acceptance criteria
 
-**Given** a client makes a deposit of 1000 on 10-01-2012
-**And** a deposit of 2000 on 13-01-2012
-**And** a withdrawal of 500 on 14-01-2012
-**When** she prints her bank statement
+**Given** a client makes a deposit of 1000 on 10-01-2012  
+**And** a deposit of 2000 on 13-01-2012  
+**And** a withdrawal of 500 on 14-01-2012  
+**When** she prints her bank statement  
 **Then** she would see
 
 ## User stories
@@ -39,5 +39,9 @@ I want to be able to withdraw from my account and have the balance update to ref
 As an account holder
 So that I don't overdraw my account
 I want to be warned when I attempt to withdraw more than my balance
+
+As an account holder
+So that I can keep track of my activity
+I want my transactions to be stored with their respective dates
 ```
 

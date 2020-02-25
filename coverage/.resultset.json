@@ -57,8 +57,31 @@
           null,
           null
         ]
+      },
+      "/Users/riapatel/makers/week-10/bank-tech-test/spec/statement_printer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/riapatel/makers/week-10/bank-tech-test/lib/statement_printer.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1582557260
+    "timestamp": 1582640594
   }
 }
