@@ -1,5 +1,20 @@
 # Bank Tech Test
 
+An interactive program run from the command line that replicates the basic banking functions. The program was written in Ruby using a TDD process, testing with RSpec.
+
+### Running the app
+
+```
+$ git clone https://github.com/notriapatel/bank-tech-test.git
+$ bundle install
+$ irb -r ./lib/bank_account.rb # run IRB and require the file
+> account = BankAccount.new # create a new instance of the bank account
+> account.deposit(100) # make a deposit
+> account.withdraw(5) # make a withdrawal
+> account.statement # print the accounts transaction history
+> exit # exit IRB
+```
+
 ## Specification
 
 ### Requirements
@@ -16,6 +31,13 @@
 **And** a withdrawal of 500 on 14-01-2012  
 **When** she prints her bank statement  
 **Then** she would see
+
+```
+date || credit || debit || balance
+14/01/2012 || || 500.00 || 2500.00
+13/01/2012 || 2000.00 || || 3000.00
+10/01/2012 || 1000.00 || || 1000.00
+```
 
 ## User stories
 
@@ -43,5 +65,16 @@ I want to be warned when I attempt to withdraw more than my balance
 As an account holder
 So that I can keep track of my activity
 I want my transactions to be stored with their respective dates
+
+As an account holder
+So that I can view my expenses
+I want to see a statement of all my transactions in reverse chronological order
 ```
 
+## Current status
+
+As of 25/2/20 a user is able to deposit, withdraw, and view a statement of their transactions. At the moment the statement displays as a one line string as opposed to a block of code.
+
+The next steps are reformatting the statement output, followed by extracting transaction logic from the BankAccount into its own separate class.
+
+Current test coverage is 98.33%
