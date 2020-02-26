@@ -1,7 +1,11 @@
-class BankAccount
-  attr_reader :balance
+require 'date'
+require_relative 'statement_printer'
 
-  def initialize(_printer = StatementPrinter.new)
+class BankAccount
+  attr_reader :balance, :transactions
+
+  def initialize(printer = StatementPrinter.new)
+    @printer = printer
     @balance = 0
     @transactions = []
     @date = DateTime.now.strftime('%d/%m/%Y')
@@ -21,7 +25,7 @@ class BankAccount
     @transactions.push("#{@date} || || #{format('%.2f', @debit)} || #{format('%.2f', @balance)}")
   end
 
-  def sort_transactions
-    @transactions.reverse
+  def statement
+    @printer.print_statement(@transactions)
   end
 end
