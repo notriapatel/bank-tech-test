@@ -13,6 +13,7 @@ $ irb -r ./lib/bank_account.rb # run IRB and require the file
 > account.withdraw(5) # make a withdrawal
 > account.statement # print the accounts transaction history
 > exit # exit IRB
+> rspec # to run the tests
 ```
 
 ## Specification
@@ -73,8 +74,8 @@ I want to see a statement of all my transactions in reverse chronological order
 
 ## Current status
 
-As of 25/2/20 a user is able to deposit, withdraw, and view a statement of their transactions. At the moment the statement displays as a one line string as opposed to a block of code.
+As of 26/2/20 a user is able to deposit, withdraw, and view a statement of their transactions. At the moment the statement displays as a one line string as opposed to a block of code.
 
 The next steps are reformatting the statement output, followed by extracting transaction logic from the BankAccount into its own separate class.
 
-Current test coverage is 98.33%
+Current test coverage is 100%
