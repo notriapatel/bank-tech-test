@@ -1,4 +1,3 @@
-require 'date'
 require_relative 'statement_printer'
 require_relative 'transaction'
 
@@ -10,21 +9,20 @@ class BankAccount
     @transaction = transaction
     @balance = 0
     @transactions = []
-    @date = DateTime.now.strftime('%d/%m/%Y')
   end
 
   def deposit(amount)
     raise 'Invalid amount' if amount.negative?
-    @credit = amount
     @balance += amount
-    @transactions << @transaction.format_deposit(@credit)
+    @transactions << (@transaction.format_deposit(amount) + "#{format('%.2f', @balance)}")
+    "You have successfully deposited #{format('%.2f', amount)}"
   end
 
   def withdraw(amount)
     raise 'Insufficient funds' if (@balance - amount).negative?
-    @debit = amount
     @balance -= amount
-    @transactions << @transaction.format_withdrawal(@debit)
+    @transactions << (@transaction.format_withdrawal(amount) + "#{format('%.2f', @balance)}")
+    "You have successfully withdrawn #{format('%.2f', amount)}"
   end
 
   def statement
