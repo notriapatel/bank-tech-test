@@ -73,8 +73,4 @@ I want to see a statement of all my transactions in reverse chronological order
 
 ## Current status
 
-As of 25/2/20 a user is able to deposit, withdraw, and view a statement of their transactions. At the moment the statement displays as a one line string as opposed to a block of code.
-
-The next steps are reformatting the statement output, followed by extracting transaction logic from the BankAccount into its own separate class.
-
-Current test coverage is 98.33%
+Current test coverage is 100%, 3 rubocop failures.
