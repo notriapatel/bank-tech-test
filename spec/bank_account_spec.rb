@@ -23,7 +23,7 @@ describe BankAccount do
   describe '#withdraw' do
     it 'updates balance after a withdrawal has been made' do
       account.deposit(10)
-      expect { account.withdraw(10) }.to change { account.balance }.by -10
+      expect { account.withdraw(10) }.to change { account.balance }.by(-10)
     end
 
     it 'raises an error if withdrawal takes balance below 0' do

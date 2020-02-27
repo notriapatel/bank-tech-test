@@ -1,7 +1,6 @@
 require 'date'
 
 class Transaction
-
   def initialize
     @balance = 0
     @date = DateTime.now.strftime('%d/%m/%Y')
