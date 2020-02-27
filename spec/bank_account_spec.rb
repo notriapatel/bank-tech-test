@@ -33,10 +33,12 @@ describe BankAccount do
 
   describe '#transactions' do
     it 'returns a sorted array of formatted transactions' do
-      Timecop.freeze(Time.local(2020, 2, 24))
-      account.deposit(10)
-      account.withdraw(5)
-      expect(account.statement).to eq "date || credit || debit || balance \n 24/02/2020 || || 5.00 || 5.00 \n 24/02/2020 || 10.00 || || 10.00"
+      expect do
+        Timecop.freeze(Time.local(2020, 2, 24))
+        account.deposit(10)
+        account.withdraw(5)
+        account.statement
+      end.to output("date || credit || debit || balance \n 24/02/2020 || || 5.00 || 5.00 \n 24/02/2020 || 10.00 || || 10.00").to_stdout
     end
   end
 end

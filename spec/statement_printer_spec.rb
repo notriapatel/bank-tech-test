@@ -10,10 +10,14 @@ describe StatementPrinter do
   end
 
   it 'prints the title line first' do
-    expect(printer.print_statement([])).to eq "date || credit || debit || balance \n "
+    expect do
+      printer.print_statement([])
+    end.to output("date || credit || debit || balance \n ").to_stdout
   end
 
   it 'adds a transaction to the statement' do
-    expect(printer.print_statement(transactions)).to eq "date || credit || debit || balance \n 25/02/2020 || || 1.00 || 1.00 \n 24/02/2020 || 5.00 || || 5.00"
+    expect do
+      printer.print_statement(transactions)
+    end.to output("date || credit || debit || balance \n 25/02/2020 || || 1.00 || 1.00 \n 24/02/2020 || 5.00 || || 5.00").to_stdout
   end
 end
