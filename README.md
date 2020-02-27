@@ -13,6 +13,7 @@ $ irb -r ./lib/bank_account.rb # run IRB and require the file
 > account.withdraw(5) # make a withdrawal
 > account.statement # print the accounts transaction history
 > exit # exit IRB
+$ rspec # to run the tests
 ```
 
 ## Specification
