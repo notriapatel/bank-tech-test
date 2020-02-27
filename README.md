@@ -15,6 +15,7 @@ $ irb -r ./lib/bank_account.rb # run IRB and require the file
 > exit # exit IRB
 $ rspec # to run the tests
 ```
+![screenshot](https://github.com/notriapatel/bank-tech-test/blob/master/user_interaction.png)
 
 ## Specification
 
